@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm Assignment</title>
     <link href="css/main.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
-    
+    <link rel="icon" href="./images/icon.png">
+
     <!--lato font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 
     <!--Playfair Display font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-       <div class="header">
-            <div class="title">
-                <h1>The System</h1> <!--Playfair display font-->
+        <header role="banner">
+            <div class="text">
+                <h1 role="heading">The <span class="cross-out">System</span></h1>
+                <!--Playfair display font-->
                 <!--the word SYSTEM need a blue line through it (placed behind-->
             </div>
-            <div class="nav">
+            <nav class="navi" role="navigation">
                 <!--needs responsive buttons-->
                 <!--lato font-->
                 <ul>
-                    <li>Planets</li>
-                    <li>Interstellar</li>
-                    <li>Contact</li>
+                    <li><a href="#">Planets</a></li>
+                    <li><a href="#">Interstellar</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
-        <div class="galaxy">
-            <!--this would be where the "breathing" galaxy goes...as the background?-->
-            <!--all words in this section are in lato font-->
-            <p>THE SYSTEM MAGAZINE</p>
-            <h1>Welcome to the Solar System</h1>
-            <!--the words SOLAR SYSTEM nee the animated gradient-->
-            <p>Take a tour around the coolest stellar system around.</p>
-        </div>
+        <main role="main">
+            <div class="hero-image">
+                <!--all words in this section are in lato font-->
+                <div class="text">
+                    <p>THE SYSTEM MAGAZINE</p>
+                    <h2>Welcome to the <span class="shifty">Solar System</span></h2>
+                    <p>Take a tour around the coolest stellar system around.</p>
+                </div>
+                <!--the words SOLAR SYSTEM needs the animated gradient-->
+                <img src="images/milky-way.jpg" alt="milky way">
+            </div>
 
-        <div class="planets">
-           <!--Each button in this section should link to the corresponding planet's wiki page-->
-            <h2>Meet the Locals</h2>
-            <div class="planet">
-                <img src="images/sun.jpg" alt="the sun">
-                <h3>The Sun</h3> <!--Lato font-->
-                <button><a href=""></a> Learn More</button>
+            <div class="planets">
+                <!--Each button in this section should link to the corresponding planet's wiki page-->
+                <h2>Meet the Locals</h2>
+                <div class="planet">
+                    <img src="images/sun.jpg" alt="the sun">
+                    <h3>The Sun</h3> <!--Lato font-->
+                    <a href="https://en.wikipedia.org/wiki/Sun">Learn More</a> 
+                </div>
+                <div class="planet">
+                    <img src="images/mercury.jpg" alt="the planet mercury">
+                    <h3>Mercury</h3>
+                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Learn More</a> 
+                </div>
+                <div class="planet">
+                    <img src="images/venus.jpg" alt="the planet venus">
+                    <h3>Venus</h3>
+                    <a href="https://en.wikipedia.org/wiki/Venus">Learn More</a> 
+                </div>
+                <div class="planet">
+                    <img src="images/earth.jpg" alt="the planet earth">
+                    <h3>Earth</h3>
+                    <a href="https://en.wikipedia.org/wiki/Earth">Learn More</a>
+                </div>
+                <div class="planet">
+                    <img src="images/moon.jpg" alt="the moon">
+                    <h3>The Moon</h3>
+                    <a href="https://en.wikipedia.org/wiki/Moon">Learn More</a>
+                </div>
+                <div class="planet">
+                    <img src="images/mars.jpg" alt="the planet mars">
+                    <h3>Mars</h3>
+                    <a href="https://en.wikipedia.org/wiki/Mars">Learn More</a>
+                </div>
             </div>
-            <div class="planet">
-                <img src="images/mercury.jpg" alt="the planet mercury">
-                <h3>Mercury</h3>
-                <button><a href=""></a> Learn More</button>
-            </div>
-            <div class="planet">
-                <img src="images/venus.jpg" alt="the planet venus">
-                <h3>Venus</h3>
-                <button><a href=""></a> Learn More</button>
-            </div>
-            <div class="planet">
-                <img src="images/earth.jpg" alt="the planet earth">
-                <h3>Earth</h3>
-                <button><a href=""></a>Learn More</button>
-            </div>
-            <div class="planet">
-                <img src="images/moon.jpg" alt="the moon">
-                <h3>The Moon</h3>
-                <button><a href=""></a> Learn More</button>
-            </div>
-            <div class="planet">
-                <img src="images/mars.jpg" alt="the planet mars">
-                <h3>Mars</h3>
-                <button><a href=""></a>Learn More</button>
-            </div>
-        </div>
-
-        <footer>
-            <p> &copy;2025 - The System. Kristen Hinojos </p>
+        </main>
+        <hr>
+        <footer role="contentinfo">
+            <p> &copy;2024 - The System. </p>
         </footer>
     </div>
 </body>
+
 </html>
