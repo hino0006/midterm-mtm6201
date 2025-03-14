@@ -1,0 +1,318 @@
+
+/* --------- global and custom variables---------- */
+:root{
+    --primaryColor: #0F75B8; 
+    --secondaryColor: #800080;
+    --titleFont: 'Playfair Display', serif;
+    --contentFont: 'Lato', sans-serif;
+    --hoverState: aqua;
+} 
+
+body{
+    background: #000;
+    color: #fff;
+}
+ 
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:focus{
+    border: 5px solid red;
+    border-radius: 50px;
+    outline: none;
+}
+
+a:focus:visited{
+    border: 5px solid red;
+    border-radius: 50px;
+    outline: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ----------- header and navigation -------- */
+.text{
+    font-family: var(--titleFont);
+    font-weight: 400;
+    font-size: 3em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+/* h1 Stripe */
+.cross-out {
+    position: relative;
+}
+
+.cross-out::after {
+    position: absolute; 
+    content: ""; 
+    width: 100%; 
+    height: 20px;  
+    right: 0; 
+    bottom: 20px; 
+    background: #0F75B8;
+    z-index: -1; 
+}
+
+/* navigation */
+.navi{
+    font-family: var(--contentFont);
+    font-size: 1.2em;
+    padding: 1.5em;
+}
+
+ul{
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+
+/* navigation link states */
+.naviLink:hover{
+    background-color: var(--hoverState);
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+    color: #000;
+    animation: hov .1s; 
+}
+
+@keyframes hov{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+
+
+.naviLink:active{
+    background-color: var(--primaryColor);
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+}
+
+.naviLink:visited{
+    background-color: var(--secondaryColor);
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+}
+
+
+/* ---------------- Hero image --------------- */
+.hero-image {   
+    overflow: hidden; 
+    position: relative;  
+}
+
+.milky {
+    width: 100%; 
+    animation: zoom 8s infinite ease-in-out alternate; 
+    display: block;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3); 
+    }
+}
+
+/* ------------- text overlay in the bottom corner of the hero img ---------- */
+.hero-text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; 
+    bottom: 50px; 
+    left: 50px;
+    z-index: 5; 
+    color: white;
+    font-family: var(--contentFont);
+}
+
+.magazine{
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-bottom: 1.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text > h2 {
+    margin: 0; 
+    font-size: 2.5em;
+    padding-bottom: 1.5em;
+    font-weight: 700;
+}
+
+
+/* Colour Shifting text */
+.shifty {
+    background: linear-gradient(90deg, blue, rgb(0, 255, 255)); 
+    background-size: 200% 100%; 
+    background-position: 0% 0%; 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    animation: textScroll 3s infinite alternate; 
+}
+
+@keyframes textScroll {
+    from {
+        background-position: 0% 0%; 
+    }
+    to {
+        background-position: 100% 0%; 
+    }
+}
+
+
+/* ----------- Meet the Locals/Planets ----------*/
+.planets{
+    font-family: var(--contentFont);
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.planets > h3{
+  font-size: 2em;
+  padding: 35px;
+}
+
+.planet > h4{
+    font-size: 1.5em;
+    padding-bottom: 35px;
+}
+
+.planetLink{
+    background-color: var(--primaryColor);
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+}
+
+.planetLink:hover{
+    background-color: var(--hoverState);
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+    color: #000;
+    animation: hov .1s;
+}
+.planetLink:visited{
+    background-color: var(--secondaryColor);
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+}
+
+.planet{
+    padding-bottom: 40px;
+}
+
+
+/* ----------- Footer -------------- */
+footer > p{
+    font-family: var(--contentFont);
+    font-weight: 700;
+    text-align: center;
+    padding: 40px 0 25px 0;
+}
+
+
+/* ---------- MEDIA QUERIES ------------- */
+
+/* for tablet */
+@media screen and (min-width: 900px){
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute; 
+        bottom: 50px; 
+        left: 50px;
+        z-index: 5; 
+        color: white;
+        font-family: var(--contentFont);
+    }
+
+
+    .hero-image {    
+        overflow: hidden; 
+        position: relative; 
+        box-shadow: 10px 10px 10px 10px #141414;  
+    } 
+
+    .solarSystem{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: fit-content;
+        margin: 0 auto;
+    }
+}
+/* for desktop */
+@media screen and (min-width: 1100px) {
+    .hero-image {
+        border-radius: 50px;    
+        overflow: hidden; 
+        position: relative; 
+        box-shadow: 10px 10px 10px 10px #141414;  
+    } 
+
+    .website-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .planets > h3{
+        display: flex;
+        text-align: initial;
+    }
+
+    .solarSystem {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 20px; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        justify-content: center; 
+        text-align: center;
+    }
+    
+    .planet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 200px; 
+    }
+
+    .planet > img {
+        width: 100%; 
+        max-width: 170px; 
+        height: auto;
+    }
+    
+
+}
